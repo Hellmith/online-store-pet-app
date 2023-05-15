@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+    <h2>О нас</h2>
+    <div class="row">
+        <img src="{% static 'logo.jpg' %}" alt="Logo" width="100">
+        <h1>Красота спасет мир! Цветы делают нашу жизнь прекраснее</h1>
+    </div>
+    <div class="carousel">
+        {% for p in products %}
+        <div class="item">
+            <div class="product">
+                <div class="image"><img src="{{ p.image.url }}" alt="Image"></div>
+                <h3>{{ p.name }}</h3>
+            </div>
+         </div>
+        {% endfor %}
+    </div>
+<script>
+    let num = 0, $items = $('.carousel .item'); $($items.get(num)).fadeTo(500, 1);
+    setInterval(() => { $($items.get(num)).fadeOut(500, ()=>{ num = num + 1; if (num > 4) num = 0;
+            $($items.get(num)).fadeTo(500, 1);
+        });
+    }, 3000);
+</script>
+
+{% endblock %}
