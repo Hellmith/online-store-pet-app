@@ -1,0 +1,58 @@
+@font-face { src: url("fonts/EkMuktaMedium-7vBD.ttf") format("truetype");
+    font-family: "EkMukta"; font-style: normal; font-weight: normal;
+}
+
+nav {display: flex; justify-content: center; font-size: 1.5rem; background-color: #99F; padding: 5px; font-family:'EkMukta'}
+nav .menu { flex-grow: 1; }
+nav a {border: 1px solid purple; padding: 0 20px; border-right-width: 5px; transition: 1s}
+nav a:hover {background-color: #11F; color: white}
+nav div a:last-of-type {border-right-width: 1px;}
+
+h2 {text-align: center}
+.row {display: flex; justify-content: center; background-color: #CCF; padding: 10px}
+.row img {margin-right: 50px}
+
+form label {display: block; font-style: italic;}
+form {text-align: center}
+.toCenter {width: 200px; margin-top: 100px; margin-left: auto; margin-right: auto;
+    padding: 5px 10px 20px 10px; border: 2px solid purple}
+
+.carousel .product .image { min-width: 460px; min-height: 345px}
+.carousel .product img { width: 460px; margin-right: 50px}
+.carousel .product { display: flex; justify-content: center; align-items: center}
+.carousel .item { display: none}
+
+.outProducts a:hover .product { background-color: #ccc}
+.outProducts .product {display: flex; border: solid 2px black; margin-top: 50px; padding: 10px 50px}
+.outProducts .product .image { min-width: 100px; flex-grow: 1}
+.outProducts .product img { width: 100px}
+.outProducts .product h3 { flex-grow: 1}
+
+.outProduct {text-align: center}
+
+.registration { width: 600px; margin-top: 50px; margin-left: auto; margin-right: auto;
+    padding: 5px 10px 20px 10px; border: 2px solid purple;
+}
+.registration .helptext { display: block; font-style: italic;}
+.registration p:last-of-type label {display: inline-block}
+.registration form ul {font-style: italic;}
+.registration form li { list-style-type: none;}
+.errorlist {color: red; animation-duration: 1s; animation-name: erroranimation; animation-iteration-count: 5;}
+
+@keyframes erroranimation {
+  from { color: red;}
+  to { color: white; background-color: red}
+}
+
+.errorinput {border-color: red}
+
+button:has(.error-count) { background-color: red; color: white}
+
+.toleft {justify-content: left;}
+a.disabled { pointer-events: none; cursor: default; background-color: #999}
+
+.outProducts .orderproduct {display: flex; margin-top: 0px; padding: 10px 50px 10px 150px}
+.outProducts .orderproduct .image { min-width: 100px; flex-grow: 1}
+.outProducts .orderproduct img { width: 100px}
+.outProducts .orderproduct h3 { flex-grow: 1}
+
